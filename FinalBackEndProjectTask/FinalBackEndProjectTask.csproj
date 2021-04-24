@@ -1,4 +1,5 @@
 ﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -43,6 +44,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -89,13 +96,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
-    <Content Include="Models\Content\css\bootstrap.min.css" />
-    <Content Include="Models\Content\css\font-awesome.min.css" />
-    <Content Include="Models\Content\css\magnific-popup.css" />
-    <Content Include="Models\Content\css\templatemo-style.css" />
-    <Content Include="Models\Content\fonts\fontawesome-webfont.svg" />
-    <Content Include="Models\html\blog-detail.html" />
-    <Content Include="Models\html\index.html" />
+    <Content Include="Models\css\bootstrap.min.css" />
+    <Content Include="Models\css\comment.css" />
+    <Content Include="Models\css\font-awesome.min.css" />
+    <Content Include="Models\css\magnific-popup.css" />
+    <Content Include="Models\css\templatemo-style.css" />
+    <Content Include="Models\fonts\fontawesome-webfont.svg" />
+    <Content Include="Models\images\about-image.jpg" />
+    <Content Include="Models\images\blog-detail-image.jpg" />
+    <Content Include="Models\images\blog-header-bg.jpg" />
+    <Content Include="Models\images\blog-image1.jpg" />
+    <Content Include="Models\images\blog-image2.jpg" />
+    <Content Include="Models\images\blog-image3.jpg" />
+    <Content Include="Models\images\blog-image4.jpg" />
+    <Content Include="Models\images\home-bg.jpg" />
+    <Content Include="Models\images\work-image1.jpg" />
+    <Content Include="Models\images\work-image2.jpg" />
+    <Content Include="Models\images\work-image3.jpg" />
+    <Content Include="Models\images\work-image4.jpg" />
     <Content Include="Models\js\bootstrap.min.js" />
     <Content Include="Models\js\custom.js" />
     <Content Include="Models\js\jquery.js" />
@@ -106,19 +124,33 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BlogdetailController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Data\AboutMeta.cs" />
+    <Compile Include="Data\HydroDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Data\comment.cs" />
+    <Compile Include="Migrations\202104241225327_Initial.cs" />
+    <Compile Include="Migrations\202104241225327_Initial.designer.cs">
+      <DependentUpon>202104241225327_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
-    <Content Include="Models\Content\fonts\fontawesome-webfont.eot" />
-    <Content Include="Models\Content\fonts\fontawesome-webfont.ttf" />
-    <Content Include="Models\Content\fonts\fontawesome-webfont.woff" />
-    <Content Include="Models\Content\fonts\fontawesome-webfont.woff2" />
-    <Content Include="Models\Content\fonts\FontAwesome.otf" />
+    <Content Include="Models\fonts\fontawesome-webfont.eot" />
+    <Content Include="Models\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Models\fonts\fontawesome-webfont.woff" />
+    <Content Include="Models\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Models\fonts\FontAwesome.otf" />
     <None Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Blogdetail\Index.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -128,8 +160,14 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Models\Content\bootstrap\" />
+    <Folder Include="Models\bootstrap\" />
+    <Folder Include="Models\Content\" />
+    <Folder Include="Models\html\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202104241225327_Initial.resx">
+      <DependentUpon>202104241225327_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -161,7 +199,10 @@
       <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
   </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
