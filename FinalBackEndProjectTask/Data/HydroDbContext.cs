@@ -14,8 +14,14 @@ namespace FinalBackEndProjectTask.Data
         }
         public DbSet<comment> Comments { get; set; }
 
-        //public DbSet<AboutMeta> AboutMetas { get; set; }
+        public DbSet<AboutMeta> AboutMetas { get; set; }
 
         public DbSet<ContactMessage> ContactMessages { get; set; }
+
+        public DbSet<Footer> Footers { get; set; }
+
+        public DbSet<Article> Articles { get; set; }
+
+        public DbSet<OurWork> OurWorks { get; set; }
     }
 }

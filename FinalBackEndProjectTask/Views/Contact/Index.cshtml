@@ -6,8 +6,8 @@
 
 
         <div class="col-md-6 col-sm-6">
-            <input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">
-            @*@Html.TextBoxFor(x => x.Name,new {@class= "form - control", @placeholder = "Full Name", @id = "cf-name" } )*@
+            @*<input type="text" class="form-control" placeholder="Full Name" id="cf-name" name="cf-name" required="">*@
+            @Html.TextBoxFor(x => x.Name,new {@class= "form-control", @placeholder = "Full Name", @id = "cf-name" } )
         </div>
 
         <div class="col-md-6 col-sm-6">
@@ -31,8 +31,8 @@
         </div>
 
         <div class="col-md-12 col-sm-12">
-            <textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>
-            @*@Html.TextAreaFor(x => x.text, new { @class = "form - control", @placeholder = "Your requirements", @id = "cf-message" })*@
+            @*<textarea class="form-control" rows="6" placeholder="Your requirements" id="cf-message" name="cf-message" required=""></textarea>*@
+            @Html.TextAreaFor(x => x.text, new { @class = "form-control", @placeholder = "Your requirements", @id = "cf-message" })
         </div>
 
         <div class="col-md-4 col-sm-12">

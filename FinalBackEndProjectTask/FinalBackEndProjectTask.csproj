@@ -127,13 +127,19 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="Controllers\CardsController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\FooterController.cs" />
     <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\WorkController.cs" />
     <Compile Include="Data\AboutMeta.cs" />
+    <Compile Include="Data\Article.cs" />
     <Compile Include="Data\ContactMessage.cs" />
+    <Compile Include="Data\Footer.cs" />
     <Compile Include="Data\HydroDbContext.cs" />
+    <Compile Include="Data\OurWork.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -145,6 +151,22 @@
     <Compile Include="Migrations\202104271646170_ContactMessagesAdded.cs" />
     <Compile Include="Migrations\202104271646170_ContactMessagesAdded.designer.cs">
       <DependentUpon>202104271646170_ContactMessagesAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301635194_articlesadded.cs" />
+    <Compile Include="Migrations\202104301635194_articlesadded.designer.cs">
+      <DependentUpon>202104301635194_articlesadded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301637105_ourworksadded.cs" />
+    <Compile Include="Migrations\202104301637105_ourworksadded.designer.cs">
+      <DependentUpon>202104301637105_ourworksadded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301638048_FootersAdded.cs" />
+    <Compile Include="Migrations\202104301638048_FootersAdded.designer.cs">
+      <DependentUpon>202104301638048_FootersAdded.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104301638470_aboutmetaadded.cs" />
+    <Compile Include="Migrations\202104301638470_aboutmetaadded.designer.cs">
+      <DependentUpon>202104301638470_aboutmetaadded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -162,6 +184,9 @@
     <Content Include="Views\Cards\İndex.cshtml" />
     <Content Include="Views\Header\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\Blog\Index.cshtml" />
+    <Content Include="Views\Work\Index.cshtml" />
+    <Content Include="Views\Footer\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -181,6 +206,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202104271646170_ContactMessagesAdded.resx">
       <DependentUpon>202104271646170_ContactMessagesAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301635194_articlesadded.resx">
+      <DependentUpon>202104301635194_articlesadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301637105_ourworksadded.resx">
+      <DependentUpon>202104301637105_ourworksadded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301638048_FootersAdded.resx">
+      <DependentUpon>202104301638048_FootersAdded.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104301638470_aboutmetaadded.resx">
+      <DependentUpon>202104301638470_aboutmetaadded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

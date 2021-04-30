@@ -35,12 +35,10 @@ namespace FinalBackEndProjectTask.Controllers
                     Name = contactMessage.Name,
                     Phone = contactMessage.Phone,
                     Budgetlvl = contactMessage.Budgetlvl,
-                    text = contactMessage.text
+                    text = contactMessage.text,
 
                 };
                 _hydroDbContext.ContactMessages.Add(conMess);
-                
-
             }
             return View();
         }

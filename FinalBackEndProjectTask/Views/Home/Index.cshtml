@@ -45,151 +45,14 @@
 
     <!-- BLOG -->
     <section id="blog" data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title">
-                        <h2>Our Blog</h2>
-                        <span class="line-bar">...</span>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-                    <!-- BLOG THUMB -->
-                    <div class="media blog-thumb">
-                        <div class="media-object media-left">
-                            <a href="blog-detail.html"><img src="~/Models/images/blog-image1.jpg" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="media-body blog-info">
-                            <small><i class="fa fa-clock-o"></i> December 22, 2017</small>
-                            <h3><a href="blog-detail.html">How To Find Out Beautiful Workspace.</a></h3>
-                            <p>It’s time to get your office out of fluorescent lights and beige carpet and into open spaces and inspiring colours.</p>
-                            <a href="#" class="btn section-btn">Read article</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-                    <!-- BLOG THUMB -->
-                    <div class="media blog-thumb">
-                        <div class="media-object media-left">
-                            <a href="blog-detail.html"><img src="~/Models/images/blog-image2.jpg" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="media-body blog-info">
-                            <small><i class="fa fa-clock-o"></i> December 18, 2017</small>
-                            <h3><a href="blog-detail.html">woman sportwear.</a></h3>
-                            <p>home workouts or you just like that athleisure aesthetic, take your pick of trainers, gym leggings and more from our edit of women’s activewear.</p>
-                            <a href="#" class="btn section-btn">Read more</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-                    <!-- BLOG THUMB -->
-                    <div class="media blog-thumb">
-                        <div class="media-object media-left">
-                            <a href="blog-detail.html"><img src="~/Models/images/blog-image3.jpg" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="media-body blog-info">
-                            <small><i class="fa fa-clock-o"></i> December 14, 2017</small>
-                            <h3><a href="blog-detail.html">new creative fashion.</a></h3>
-                            <p>hough we've forever been proponents of the little guys, it's never been more important to highlight buzzy, new designers than it is right now.</p>
-                            <a href="#" class="btn section-btn">Read article</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-sm-6">
-                    
-                    <div class="media blog-thumb">
-                        <div class="media-object media-left">
-                            <a href="blog-detail.html"><img src="~/Models/images/blog-image4.jpg" class="img-responsive" alt=""></a>
-                        </div>
-                        <div class="media-body blog-info">
-                            <small><i class="fa fa-clock-o"></i> December 10, 2017</small>
-                            <h3><a href="blog-detail.html">minimalist design trend in 2018.</a></h3>
-                            <p>as they say, “everything old is new again,” and 2018 will be a year of modernizing graphic design trends from the past </p>
-                            <a href="#" class="btn section-btn">View Detail</a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
+        @Html.Action("Index", "Blog")
     </section>
 
 
     <!-- WORK -->
-    <section id="work" data-stellar-background-ratio="0.5">          
-        <div class="container">
-            <div class="row">
+    <section id="work" data-stellar-background-ratio="0.5">
+        @Html.Action("Index", "Work")
 
-                <div class="col-md-12 col-sm-12">
-                    <div class="section-title">
-                        <h2>Our work</h2>
-                        <span class="line-bar">...</span>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <!-- WORK THUMB -->
-                    <div class="work-thumb">
-                        <a href="~/Models/images/work-image1.jpg" class="image-popup">
-                            <img src="~/Models/images/work-image1.jpg" class="img-responsive" alt="Work">
-
-                            <div class="work-info">
-                                <h3>Clean &amp; Minimal</h3>
-                                <small>Product Design</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <!-- WORK THUMB -->
-                    <div class="work-thumb">
-                        <a href="~/Models/images/work-image2.jpg" class="image-popup">
-                            <img src="~/Models/images/work-image2.jpg" class="img-responsive" alt="Work">
-
-                            <div class="work-info">
-                                <h3>Studio Bag</h3>
-                                <small>Branding</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <!-- WORK THUMB -->
-                    <div class="work-thumb">
-                        <a href="~/Models/images/work-image3.jpg" class="image-popup">
-                            <img src="~/Models/images/work-image3.jpg" class="img-responsive" alt="Work">
-
-                            <div class="work-info">
-                                <h3>Frame Design</h3>
-                                <small>Photography</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-6">
-                    <!-- WORK THUMB -->
-                    <div class="work-thumb">
-                        <a href="~/Models/images/work-image4.jpg" class="image-popup">
-                            <img src="~/Models/images/work-image4.jpg" class="img-responsive" alt="Work">
-
-                            <div class="work-info">
-                                <h3>Paint Work</h3>
-                                <small>Art, Design</small>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </section>
 
     <!-- CONTACT -->
@@ -225,68 +88,8 @@
 
     <!-- FOOTER -->
     <footer data-stellar-background-ratio="0.5">
-        <div class="container">
-            <div class="row">
+        @Html.Action("Index", "Footer")
 
-                <div class="col-md-5 col-sm-12">
-                    <div class="footer-thumb footer-info">
-                        <h2>Hydro Company</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    </div>
-                </div>
-
-                <div class="col-md-2 col-sm-4">
-                    <div class="footer-thumb">
-                        <h2>Company</h2>
-                        <ul class="footer-link">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Join our team</a></li>
-                            <li><a href="#">Read Blog</a></li>
-                            <li><a href="#">Press</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-2 col-sm-4">
-                    <div class="footer-thumb">
-                        <h2>Services</h2>
-                        <ul class="footer-link">
-                            <li><a href="#">Pricing</a></li>
-                            <li><a href="#">Documentation</a></li>
-                            <li><a href="#">Support</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-md-3 col-sm-4">
-                    <div class="footer-thumb">
-                        <h2>Find us</h2>
-                        <p>123 Grand Rama IX, <br> Krung Thep Maha Nakhon 10400</p>
-                    </div>
-                </div>
-
-                <div class="col-md-12 col-sm-12">
-                    <div class="footer-bottom">
-                        <div class="col-md-6 col-sm-5">
-                            <div class="copyright-text">
-                                <p>Copyright &copy; 2017 Your Company</p>
-                            </div>
-                        </div>
-                        <div class="col-md-6 col-sm-7">
-                            <div class="phone-contact">
-                                <p>Call us <span>(+66) 010-020-0340</span></p>
-                            </div>
-                            <ul class="social-icon">
-                                <li><a href="https://www.facebook.com/templatemo" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                <li><a href="#" class="fa fa-twitter"></a></li>
-                                <li><a href="#" class="fa fa-instagram"></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
     </footer>
 
 
