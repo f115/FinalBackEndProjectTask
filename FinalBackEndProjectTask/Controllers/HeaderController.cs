@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace FinalBackEndProjectTask.Controllers
 {
-    public class BlogdetailController : Controller
+    public class HeaderController : Controller
     {
-        // GET: Blogdetail
+        // GET: Header
         public ActionResult Index()
         {
             return View();

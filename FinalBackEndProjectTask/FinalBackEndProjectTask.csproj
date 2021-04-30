@@ -110,10 +110,12 @@
     <Content Include="Models\images\blog-image3.jpg" />
     <Content Include="Models\images\blog-image4.jpg" />
     <Content Include="Models\images\home-bg.jpg" />
+    <Content Include="Models\images\WhatsApp Image 2021-04-01 at 19.55.03.jpeg" />
     <Content Include="Models\images\work-image1.jpg" />
     <Content Include="Models\images\work-image2.jpg" />
     <Content Include="Models\images\work-image3.jpg" />
     <Content Include="Models\images\work-image4.jpg" />
+    <Content Include="Models\images\ya.bmp" />
     <Content Include="Models\js\bootstrap.min.js" />
     <Content Include="Models\js\custom.js" />
     <Content Include="Models\js\jquery.js" />
@@ -125,9 +127,12 @@
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
-    <Compile Include="Controllers\BlogdetailController.cs" />
+    <Compile Include="Controllers\CardsController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HeaderController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Data\AboutMeta.cs" />
+    <Compile Include="Data\ContactMessage.cs" />
     <Compile Include="Data\HydroDbContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -136,6 +141,10 @@
     <Compile Include="Migrations\202104241225327_Initial.cs" />
     <Compile Include="Migrations\202104241225327_Initial.designer.cs">
       <DependentUpon>202104241225327_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202104271646170_ContactMessagesAdded.cs" />
+    <Compile Include="Migrations\202104271646170_ContactMessagesAdded.designer.cs">
+      <DependentUpon>202104271646170_ContactMessagesAdded.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -149,8 +158,10 @@
     <Content Include="Models\fonts\FontAwesome.otf" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Blogdetail\Index.cshtml" />
     <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Cards\İndex.cshtml" />
+    <Content Include="Views\Header\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -167,6 +178,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202104241225327_Initial.resx">
       <DependentUpon>202104241225327_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202104271646170_ContactMessagesAdded.resx">
+      <DependentUpon>202104271646170_ContactMessagesAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
