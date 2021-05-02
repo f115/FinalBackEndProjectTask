@@ -143,7 +143,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Data\comment.cs" />
+    <Compile Include="Data\Comment.cs" />
     <Compile Include="Migrations\202104241225327_Initial.cs" />
     <Compile Include="Migrations\202104241225327_Initial.designer.cs">
       <DependentUpon>202104241225327_Initial.cs</DependentUpon>
