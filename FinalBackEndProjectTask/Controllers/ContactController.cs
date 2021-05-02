@@ -19,7 +19,7 @@ namespace FinalBackEndProjectTask.Controllers
         }
 
         [HttpGet]
-        public ActionResult Index()
+        public ActionResult Index() 
         {
             return View();
         }
@@ -43,8 +43,4 @@ namespace FinalBackEndProjectTask.Controllers
             return View();
         }
     }
-                
-
-        
-    
 }
